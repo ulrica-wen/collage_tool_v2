@@ -1,0 +1,11 @@
+rembg==2.0.50
+Pillow==9.3.0
+streamlit==1.21.0
+numba==0.57
+numpy==1.23.0
+altair
+pandas
+protobuf
+click==8
+opencv-python-headless
+matplotlib
