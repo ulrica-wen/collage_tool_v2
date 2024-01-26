@@ -9,3 +9,5 @@ protobuf
 click==8
 opencv-python-headless
 matplotlib
+pafy
+youtube-dl==2020.12.2
