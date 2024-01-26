@@ -211,7 +211,7 @@ with col1:
 
         #user selection of start and end times 
         #[WORK] (low priority) Change to manually entering start and end times?
-        (start,end) = st.slider("Select start and end time", 0.0, (durationInSeconds), 
+        start,end = st.slider("Select start and end time", 0.0, np.float(durationInSeconds), 
                               step=0.1, key="time_slider", disabled=st.session_state.disabled)
 
         st.button("Reset Parameters",on_click=reset)
