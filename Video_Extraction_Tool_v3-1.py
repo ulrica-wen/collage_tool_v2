@@ -130,7 +130,7 @@ def extractCollage(collage):
     elif (collage == "4x2"):
         seq_length = 8
         frameRate = (end-start) / (seq_length - 1)
-    frameRate = round(frameRate,2)
+    frameRate = round(frameRate,1)
 
     for counter in range(seq_length):   
         #Set the current time position of the video
