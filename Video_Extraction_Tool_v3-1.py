@@ -130,6 +130,7 @@ def extractCollage(collage):
     elif (collage == "4x2"):
         seq_length = 8
         frameRate = (end-start) / (seq_length - 1)
+    frameRate = round(frameRate,2)
 
     for counter in range(seq_length):   
         #Set the current time position of the video
@@ -167,7 +168,7 @@ def extractCollage(collage):
             elif (collage == "4x2"):
                 grid_image = np.concatenate([np.concatenate(frame_list[i:i+2], axis=1) for i in range(0, 8, 2)], axis=0)
         break
-    # cv2.imwrite(str(start) +"to"+ str(end) +"_"+collage+".jpg", cv2.cvtColor((grid_image * 255).astype(np.uint8), cv2.COLOR_RGB2BGR))
+    cv2.imwrite(str(start) +"to"+ str(end) +"_"+collage+".jpg", cv2.cvtColor((grid_image * 255).astype(np.uint8), cv2.COLOR_RGB2BGR))
 
 #column code
 with col1:
