@@ -110,6 +110,7 @@ def extractIndividual(frames):
 
 # OR concatenate those images into 1 image
 def extractCollage(collage):
+    global grid_image
     # width, height = 300, 400
     frames_list = []
     images = []
