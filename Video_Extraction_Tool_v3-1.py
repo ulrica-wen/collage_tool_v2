@@ -159,7 +159,7 @@ def extractCollage(collage):
             if (collage == "2x2"):
                 for i in range(0,4,2):
                     st.image(frame_list[i:i+2])
-                grid_image = np.concatenate([np.concatenate(frame_list[i:i+2], axis=1) for i in range(0, 4, 2)], axis=0)
+                # grid_image = np.concatenate([np.concatenate(frame_list[i:i+2], axis=1) for i in range(0, 4, 2)], axis=0)
             elif (collage == "3x3"):
                 grid_image = np.concatenate([np.concatenate(frame_list[i:i+3], axis=1) for i in range(0, 9, 3)], axis=0)
             elif (collage == "2x4"):
