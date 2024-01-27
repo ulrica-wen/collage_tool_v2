@@ -119,6 +119,7 @@ def extractCollage(collage):
     # frame_count=int(vidcap.get(cv2.CAP_PROP_FRAME_COUNT))
     #Calculate the interval at which frames will be added to the list, based on selection
     if (collage == "2x2"):
+        print("2x2")
         seq_length = 4
         frameRate = (end-start) / (seq_length - 1)
     elif (collage == "3x3"):
