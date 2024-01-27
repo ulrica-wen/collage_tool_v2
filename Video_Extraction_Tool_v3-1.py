@@ -158,6 +158,7 @@ def extractCollage(collage):
             # reshape the frames into a grid
             if (collage == "2x2"):
                 for i in range(0,4,2):
+                    st.text(i)
                     st.image(frame_list[i:i+2])
                 # grid_image = np.concatenate([np.concatenate(frame_list[i:i+2], axis=1) for i in range(0, 4, 2)], axis=0)
             elif (collage == "3x3"):
@@ -167,7 +168,7 @@ def extractCollage(collage):
             elif (collage == "4x2"):
                 grid_image = np.concatenate([np.concatenate(frame_list[i:i+2], axis=1) for i in range(0, 8, 2)], axis=0)
         break
-    cv2.imwrite(str(start) +"to"+ str(end) +"_"+collage+".jpg", cv2.cvtColor((grid_image * 255).astype(np.uint8), cv2.COLOR_RGB2BGR))
+    # cv2.imwrite(str(start) +"to"+ str(end) +"_"+collage+".jpg", cv2.cvtColor((grid_image * 255).astype(np.uint8), cv2.COLOR_RGB2BGR))
 
 #column code
 with col1:
