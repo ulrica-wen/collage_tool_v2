@@ -144,6 +144,8 @@ def extractCollage(collage):
         # frame=cv2.resize(frame, (height, width))
         frame = frame/255
         #Append to the frame
+        st.text(counter)
+        st.image(frame)
         frames_list.append(frame)
         sec += frameRate
 
@@ -157,10 +159,7 @@ def extractCollage(collage):
 
             # reshape the frames into a grid
             if (collage == "2x2"):
-                for i in range(0,4,2):
-                    st.text(i)
-                    st.image(frame_list[i:i+2])
-                # grid_image = np.concatenate([np.concatenate(frame_list[i:i+2], axis=1) for i in range(0, 4, 2)], axis=0)
+                grid_image = np.concatenate([np.concatenate(frame_list[i:i+2], axis=1) for i in range(0, 4, 2)], axis=0)
             elif (collage == "3x3"):
                 grid_image = np.concatenate([np.concatenate(frame_list[i:i+3], axis=1) for i in range(0, 9, 3)], axis=0)
             elif (collage == "2x4"):
