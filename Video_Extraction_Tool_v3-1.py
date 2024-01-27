@@ -149,6 +149,7 @@ def extractCollage(collage):
         sec += frameRate
 
     images.append(frames_list)
+    st.image(images)
 
     for frame_list in images:
         for i, frame in enumerate(frame_list):
@@ -247,8 +248,8 @@ with col2:
         with tab2:
             st.write("###")
             #radio button to select what format of concatenated images
-            collage = str(st.radio("Collage of Images to Extract", ["2x2", "3x3", "2x4", "4x2"],
-                               key=st.session_state.collage_slider))
+            collage = st.radio("Collage of Images to Extract", ["2x2", "3x3", "2x4", "4x2"],
+                               key=st.session_state.collage_slider)
             
             st.write("###")
             collageButton = st.button("Extract Image", key="tabular2")
