@@ -119,7 +119,6 @@ def extractCollage(collage):
     # frame_count=int(vidcap.get(cv2.CAP_PROP_FRAME_COUNT))
     #Calculate the interval at which frames will be added to the list, based on selection
     if (collage == "2x2"):
-        st.text(collage)
         seq_length = 4
         frameRate = (end-start) / (seq_length - 1)
     elif (collage == "3x3"):
@@ -158,6 +157,8 @@ def extractCollage(collage):
 
             # reshape the frames into a grid
             if (collage == "2x2"):
+                for i in range(0,4,2):
+                    st.image(frame_list[i:i+2])
                 grid_image = np.concatenate([np.concatenate(frame_list[i:i+2], axis=1) for i in range(0, 4, 2)], axis=0)
             elif (collage == "3x3"):
                 grid_image = np.concatenate([np.concatenate(frame_list[i:i+3], axis=1) for i in range(0, 9, 3)], axis=0)
